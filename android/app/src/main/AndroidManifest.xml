@@ -1,8 +1,25 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- ====================================================================== -->
+    <!-- PERMISOS DE BLUETOOTH Y UBICACIÓN (Compatibilidad Total Android 7+)    -->
+    <!-- ====================================================================== -->
+
+    <!-- Permisos Clásicos (Para Android 11 y versiones anteriores) -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Permisos Modernos (Para Android 12 y versiones superiores) -->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <!-- ====================================================================== -->
+
     <application
-        android:label="contador_frey"
+        android:label="Contador Sincrónico V2"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
             android:exported="true"
